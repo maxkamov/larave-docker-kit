@@ -8,5 +8,5 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::get('/test', function (Request $request) {
-    return response()->json(['message' => 'Hello world']);
+    return response()->json(['name' => \Illuminate\Support\Facades\Auth::user()->name]);
 });
